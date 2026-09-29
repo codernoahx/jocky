@@ -1,0 +1,12 @@
+JOCKY 0.1
+
+profile "windows_triage"
+
+collect host
+collect users
+collect processes
+collect network
+collect services
+
+hash "C:/Windows/System32/drivers/etc/hosts" sha256
+output "json"

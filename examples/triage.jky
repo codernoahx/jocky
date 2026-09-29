@@ -1,0 +1,17 @@
+JOCKY 0.1
+
+profile "endpoint_triage"
+
+collect host
+collect users
+collect processes
+collect network
+collect services
+
+# Explicit evidence file.
+hash "/etc/hosts" sha256
+
+# Bounded directory scan for a prototype.
+scan_dir "/tmp" max_depth=1
+
+output "json"
